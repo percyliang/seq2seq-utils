@@ -2,8 +2,8 @@ This repository contains some scripts for running experiments with fairseq on
 CodaLab.
 
 The main entry point is `run.rb`, which can run things both locally (pass
-@cl=0) and on CodaLab (pass @cl=1).  Note: pass `-n` to print out the command
-that will be executed.
+`@cl=0`) and on CodaLab (pass `@cl=1`).  Note: pass `-n` to print out the
+command that will be executed.
 
 Upload things to CodaLab:
 
@@ -19,5 +19,5 @@ Generate datasets and train models:
     # Create synthetic dataset
     ./run.rb @cl=1 @m=data @data=data2
 
-    # Train a model on that datset
+    # Train a model on that dataset
     ./run.rb @cl=1 @m=train @data=data2
