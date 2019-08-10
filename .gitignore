@@ -1,0 +1,15 @@
+/*.pt
+/preprocessed
+/tensorboard
+/*.json
+/*.jsonl
+/data*
+/codalab-tensorboard
+
+/fig
+/fairseq
+
+/notes.otl
+/nav
+/tags
+/datasets
