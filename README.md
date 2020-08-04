@@ -1,9 +1,13 @@
 This repository contains some scripts for running experiments with fairseq on
 CodaLab.
 
-The main entry point is `run.rb`, which can run things both locally (pass
+The main entry point is `run.ry`, which can run things both locally (pass
 `@cl=0`) and on CodaLab (pass `@cl=1`).  Note: pass `-n` to print out the
 command that will be executed.
+
+One-time setup:
+
+    ./setup.sh
 
 Upload things to CodaLab:
 
@@ -17,7 +21,7 @@ Generate datasets and train models:
     cl make train.src:prepare-iwslt14/iwslt14.tokenized.de-en/train.de train.tgt:prepare-iwslt14/iwslt14.tokenized.de-en/train.en valid.src:prepare-iwslt14/iwslt14.tokenized.de-en/valid.de valid.tgt:prepare-iwslt14/iwslt14.tokenized.de-en/valid.en test.src:prepare-iwslt14/iwslt14.tokenized.de-en/test.de test.tgt:prepare-iwslt14/iwslt14.tokenized.de-en/test.en -n iwslt14-de-en
 
     # Create synthetic dataset
-    ./run.rb @cl=1 @m=data @data=data2
+    ./run.py @cl=1 @mode=data @data=data2
 
     # Train a model on that dataset
-    ./run.rb @cl=1 @m=train @data=data2
+    ./run.py @cl=1 @mode=train @data=data2
